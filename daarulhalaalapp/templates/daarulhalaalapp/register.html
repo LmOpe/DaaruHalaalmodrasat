@@ -1,0 +1,75 @@
+{% extends 'daarulhalaalapp/base.html' %}
+{% load static %}
+{% block main %}
+<div id="registration">
+    <form id="registration-form" method="post" action="{% url 'daarulhalaalapp:course_registration' %}">
+        <div>
+            <h4>Register</h4>
+        </div>
+        <div id="form">
+            {% csrf_token %}
+            <div class="form-col">
+                <div class="input">
+                    <label for="first-name">
+                        First Name
+                    </label>
+                    <input autofocus required type="text" name="first-name" id="first-name">
+                </div>
+                <div class="input">
+                    <label for="middle-name">
+                        Middle Name
+                    </label>
+                    <input required type="text" name="middle-name" id="middle-name">
+                </div>
+                <div class="input">
+                    <label for="last-name">
+                        Last Name
+                    </label>
+                    <input required type="text" name="last-name" id="last-name">
+                </div>
+                <div class="input">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input required type="email" name="email" id="email">
+                </div>
+                <div class="input">
+                    <label for="number">
+                        Whatsapp Number
+                    </label>
+                    <input required type="tel" id="number" name="number" pattern="[+][0-9]{3}[0-9]{3}[0-9]{3}[0-9]{4}" title="Intl format: +1234567890123" placeholder="+123 456 789 0123">
+                </div>
+                <div class="input">
+                    <label for="city">
+                        City
+                    </label>
+                    <input type="text" name="city" id="city">
+                </div>
+            </div>
+            <div class="form-col drop-downs">
+                <div class="input">
+                    <label for="country">
+                        Country
+                    </label>
+                    <select required name="country" id="country">
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="courses">
+                        Courses
+                    </label>
+                    <select required name="courses" id="courses">
+                        <option value="Learn Arabic online">Learn Arabic online</option>
+                        <option value="Teaching Noorul bayan online">Teaching Noorul bayan online</option>
+                        <option value="Learn Qur'an online with">Learn Qur'an online with tajweed</option>
+                        <option value="Tafseer Qur'an online">Tafseer Qur'an online</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="submit-button">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
+{% endblock %}

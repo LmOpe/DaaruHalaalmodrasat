@@ -1,0 +1,34 @@
+{% extends 'daarulhalaalapp/base.html' %}
+{% load static %}
+{% block main %}
+<div id="about">
+    <div id="intro">
+        <p><strong class="green-color">Daarul Halaal</strong> is the pioneer and one of the best online Academy
+            from Nigeria, providing online Qur'an and Arabic classes since 2020 across the globe.</p>
+        <p>
+            You and your kids can learn Qur'an reading with highly qualified and trained Qur'an teachers at
+            home.
+        </p>
+
+    </div>
+    <div id="more-info">
+        <p>Online Quran classes are the greatest revolution in the Qur'an teaching for kids where the
+            children can learn Qur'an reading online with qualified and experienced Qur'an teachers
+            one-on-one.</p>
+        <p>We use the latest technology where the teacher and students interact with each other as they are
+            in one classroom.</p>
+        <p>All you need to start learning is just a laptop or ipad and internet connection.</p>
+        <p>
+            In a very short time, your child will be able to read Qur'an with Tajweed without any mistakes.
+            No matter what your age is, and how busy your schedule is. but if you didn't get a chance to
+            learn how to read Qur'an, get a <strong id="free-trial"><a href="{% url 'daarulhalaalapp:course_registration' %}">Free trial</a></strong> for easy and affordable
+            online Qur'an classes.
+        </p>
+    </div>
+    <div id="conclusion">
+        <p>
+            A trial @ <strong class="green-color">Daarul Halaal Modrasat</strong> will surely convince you.
+        </p>
+    </div>
+</div>
+{% endblock %}

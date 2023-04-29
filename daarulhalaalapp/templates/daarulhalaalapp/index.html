@@ -1,0 +1,15 @@
+{% extends 'daarulhalaalapp/base.html' %}
+{% load static %}
+{% block main %}
+<div id="get-registered-section">
+    <h3>DARUL HALAAL</h3>
+    <small>FOR</small>
+    <h3>QUR'AN MEMORIZATION AND ISLAMIC STUDIES</h3>
+    <div id="registration-button">
+        <a href="{% url 'daarulhalaalapp:course_registration' %}">
+            <button id="get-registered">Get Registered</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
