@@ -5,9 +5,6 @@ name = "pypi"
 
 [packages]
 django = "*"
-requests = "*"
-django-anymail = "*"
-mailjet = "*"
 
 [dev-packages]
 
